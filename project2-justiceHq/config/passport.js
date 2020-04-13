@@ -10,7 +10,7 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     // a user has logged in via OAuth!
-    Student.findOne({ 'googleId': profile.id }, function(err, user) {
+    User.findOne({ 'googleId': profile.id }, function(err, user) {
       if (err) return cb(err);
       if (user) {
         if (!user.avatar) {
@@ -22,7 +22,7 @@ passport.use(new GoogleStrategy({
           return cb(null, user);
         }
       } else {
-        // we have a new student via OAuth!
+        // we have a new User via OAuth!
         var newUser = new User({
           name: profile.displayName,
           email: profile.emails[0].value,

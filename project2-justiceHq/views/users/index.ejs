@@ -82,7 +82,7 @@
                       <!-- Add delete form - don't forget to install method-override -->
                       <span class="title"><%- comment.text %></span>
                       <% if (user._id.equals(user && user._id)) { %>
-                        <form action="/facts/<%= fact._id %>?_method=DELETE" method="POST" class="secondary-content">
+                        <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST" class="secondary-content">
                           <button type="submit" class="btn-small red-text">X</button>
                         </form>
                       <% } %>
@@ -91,7 +91,7 @@
                 </ul>
                 <% if (user._id.equals(user && user._id)) { %>
                   <div class="card-action">
-                    <form action="/facts" method="POST">
+                    <form action="/comments" method="POST">
                       <input type="text" name="text" class="white-text">
                       <button type="submit" class="btn white-text">Comment</button>
                     </form>
