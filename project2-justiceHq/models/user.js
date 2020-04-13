@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
-// The factSchema is used to embedded docs in as tudent doc.
-// There is no model and no 'facts' collection
+// The commentSchema is used to embed documents into the userSchema
 var commentSchema = new mongoose.Schema({
   text: String
 }, {
@@ -11,9 +10,8 @@ var commentSchema = new mongoose.Schema({
 var userSchema = new mongoose.Schema({
   name: String,
   email: String,
-  cohort: String,
   avatar: String,
-  facts: [commentSchema],
+  comments: [commentSchema],
   googleId: String
 }, {
   timestamps: true
