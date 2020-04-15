@@ -20,6 +20,7 @@ require('./config/passport');
 // require our routes
 var indexRoutes = require('./routes/index');
 var usersRoutes = require('./routes/users');
+var postsRoutes = require('./routes/posts');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({
-   secret: 'Restore Justice!',
+   secret: 'SEIRocks!',
    resave: false,
    saveUninitialized: true
  }));
@@ -42,6 +43,7 @@ app.use(methodOverride('_method'));
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/', usersRoutes);
+app.use('/posts', postsRoutes);
 
 // invalid request, send 404 page
 app.use(function(req, res) {
