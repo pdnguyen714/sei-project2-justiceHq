@@ -26,23 +26,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-//same file as post
 const commentSchema = new mongoose.Schema({
     text: String,
 },
     { timestamps: true }
 );
-//make this a referenced schema in a different file
+
 const postSchema = new mongoose.Schema({
     text: {
-        type: String,
-      
+        type: String,     
     },
     
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'},
-        comments: [commentSchema],
+        comment: [{type: Schema.Types.ObjectId, ref: 'Comment'}],
 },  
 
     { timestamps: true }

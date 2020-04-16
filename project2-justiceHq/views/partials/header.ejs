@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>JusticeHQ</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -20,7 +21,7 @@
             <% if (user) { %>
             <a href="/logout"><i class="material-icons left" trending_flat></i>Log Out</a>
             <% } else { %>
-            <a href="/auth/google"><i class="material-icons left" vpn_key></i>Login with Google</a>
+                  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
             <% } %>
           </li>
           <li class="padding-right"><%= user ? `Logged in as: ${user.name}` : "Not Logged In" %></li>
