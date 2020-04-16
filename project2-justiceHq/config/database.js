@@ -1,13 +1,15 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const DATABASE_URL = 'mongodb+srv://sei:sei@cluster0-xtnng.mongodb.net/test?retryWrites=true&w=majority'
 
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+    DATABASE_URL,
+    {
+        useNewUrlParser: true, 
+        useCreateIndex: true, 
+        useUnifiedTopology: true
+    });
 
-// database connection event
-mongoose.connection.on('connected', function () {
-  console.log(`Mongoose connected to: ${process.env.DATABASE_URL}`);
-});
-
+mongoose.connection.on('connected', () => {
+    console.log('Connected to MongoDB')
+})
 module.exports = mongoose;

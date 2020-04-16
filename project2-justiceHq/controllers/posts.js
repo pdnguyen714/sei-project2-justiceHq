@@ -1,40 +1,73 @@
-const User = require('../models/user');
 const Post = require('../models/post');
 
-module.exports = {
-    index,
-    addPost,
-    delPost,
-    updatePost,
-    addComment
-  };
+// function index(req, res, next) {
+//     let modelQuery =  req.query.name ? {name: new RegExp(req.query.name, 'i')} : {};
+//     let sortKey = req.query.sort || 'name';
+//     Post.find(modelQuery)
+//     .exec(function(err, posts) {
+//       if (err) return next(err);
+//       // Passing search values, name & sortKey, for use in the EJS
+//       res.render('posts/index'
+//       , { 
+//         posts, 
+//         user: req.user,
+//         name: req.query.name, 
+//         sortKey 
+//       });
+//     }
+//     );
+//   }
 
+
+// refactored but does it work??
 function index(req, res, next) {
-    res.send('index function')
+  Post.find()
+  .exec(function(err, posts) {
+    console.log(posts);
+    if (err) return next(err);
+    res.render('posts/index', { 
+      posts,
+      user: req.user
+      });
+  });
 }
 
-function addPost(req, res, next) {
-    res.send('hit add post action')
-    // req.user.facts.push(req.body);
-    // req.user.save(function(err) {
-    //   res.redirect('/users');
-    // });
+
+
+
+  // function addPost(req, res, next) {
+  //   console.log(req.user);
+  //   const post = new Post(req.body)
+  //   // post.user = req.user._id;
+  //   // req.post.push(req.body);
+  //   post.save(function(err, post) {
+  //     console.log('posts page post', post);
+  //     res.redirect('/posts');
+  //   });
+  // }
+
+
+  function addPost(req, res, next) {
+    req.body.category = 'posts';
+    console.log('req.body', req.body);
+    const post = new Post(req.body)
+    post.save(function(err, posts) {
+      console.log('posts page post', post);
+      res.redirect('/posts');
+    });
   }
-  
+
   function delPost(req, res, next) {
-      res.send('hit delete post action');
-    // User.findOne({'comments._id': req.params.id}, function(err, user) {
-    //   user.facts.id(req.params.id).remove();
-    //   user.save(function(err) {
-    //     res.redirect('/users');
-    //   });
-    // });
+    User.findOne({'posts._id': req.params.id}, function(err, user) {
+      user.facts.id(req.params.id).remove();
+      user.save(function(err) {
+        res.redirect('/users');
+      });
+    });
   }
 
-  function updatePost(req, res, next) {
-    res.send('hit update post action');
-  }
-
-  function addComment(req, res, next) {
-    res.send('add comment action')
-  }
+  module.exports = {
+    index,
+    addPost,
+    delPost
+}

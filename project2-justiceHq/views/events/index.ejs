@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<div class="row">
+  <div id="users" class="col s12">
+    <div class="card black">
+      <div class="card-content black-text">
+        <ul class="collection">
+          <% posts.forEach(function(p) { %>
+          <li class="collection-item  text-darken-2">
+            <span class="title"><%- p.text %></span>
+          </li>
+          <% }) %>
+        </ul>
+        <div class="card-action">
+          <form action="/posts" method="POST">
+            <input type="hidden" name="posts">
+            <input type="text" name="text" class="black white-text">
+            <button class="btn white black-text" type="submit">Add Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%- include('../partials/footer') %>

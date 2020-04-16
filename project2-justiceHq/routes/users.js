@@ -1,12 +1,15 @@
-var router = require('express').Router();
-var usersCtrl = require('../controllers/users');
+const router = require('express').Router();
+const usersCtrl = require('../controllers/users');
 
-// GET /users
-router.get('/users', usersCtrl.index);
+router.get('/', usersCtrl.index);
+
+router.post('/post', isLoggedIn, usersCtrl.addPost);
+
+router.delete('/post/:id', usersCtrl.delPost);
 
 function isLoggedIn(req, res, next) {
-  if ( req.isAuthenticated() ) return next();
-  res.redirect('/auth/google');
+    if (req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
 }
 
 module.exports = router;

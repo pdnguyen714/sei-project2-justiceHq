@@ -1,30 +1,28 @@
-var router = require('express').Router();
-var passport = require('passport');
-
-// The root route renders our only view
-router.get('/', function(req, res) {
-  res.redirect('/posts');
+var express = require('express');
+var router = express.Router();
+const passport = require('passport');
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'JusticeHQ' });
 });
 
-// Google OAuth login route
+//OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
 ));
-
-// Google OAuth callback route
+//OAuth callback route
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/users',
-    failureRedirect : '/users'
+    successRedirect : '/posts',
+    failureRedirect : '/posts'
   }
 ));
-
-// OAuth logout route
-router.get('/logout', function(req, res){
+//OAuth logout route
+router.get('/logout', function(req,res){
   req.logout();
-  res.redirect('/');
-});
+  res.redirect('posts');
+})
 
 module.exports = router;
