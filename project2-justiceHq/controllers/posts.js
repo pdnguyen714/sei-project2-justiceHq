@@ -13,7 +13,7 @@ function index(req, res, next) {
 }
 
   function addPost(req, res, next) {
-    req.body.category = 'posts';
+    req.body.post = 'posts';
     const post = new Post(req.body)
     post.save(function(err, posts) {
       console.log('posts page!', posts);
@@ -31,14 +31,29 @@ function index(req, res, next) {
   // }
 
   function delPost(req, res, next) {
-    console.log('worked!')
-    Post.findByIdAndRemove(req.params.id), function(err, posts) {
-        res.redirect('/posts');
-    };
+    Post.deleteOne({_id:req.params.id})
+    .then((err) => {
+           res.redirect('/posts');
+    })
   }
+
+  const updatePost = (req, res) => {
+    console.log("update action");
+    console.log(req.params.id);
+    Post.findByIdAndUpdate(req.params.id, req.body, (err, posts) => {
+      if (err) {
+        console.log("error");
+        console.log(err);
+        return res.redirect(`/posts/${post._id}`);
+      }
+      console.log(deck.name);
+      res.redirect(`/posts/${post._id}`);
+    });
+  };
 
   module.exports = {
     index,
     addPost,
-    delPost
+    delPost,
+    updatePost
 }
