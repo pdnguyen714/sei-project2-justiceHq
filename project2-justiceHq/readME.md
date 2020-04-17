@@ -34,6 +34,9 @@ Technologies Used:
 Getting Started:
 =========================================
 
+JusticeHQ:
+https://seiproject2.herokuapp.com
+
 Trello:
 https://trello.com/b/wPxF9Tcz/sei-dt-71project-2
 
