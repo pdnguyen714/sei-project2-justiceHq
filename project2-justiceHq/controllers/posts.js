@@ -21,39 +21,56 @@ function index(req, res, next) {
     });
   }
 
-  // function delPost(req, res, next) {
-  //   User.findOne({'posts._id': req.params.id}, function(err, user) {
-  //     user.post.id(req.params.id).remove();
-  //     user.save(function(err) {
-  //       res.redirect('/posts');
-  //     });
-  //   });
-  // }
-
+  
   function delPost(req, res, next) {
     Post.deleteOne({_id:req.params.id})
     .then((err) => {
-           res.redirect('/posts');
+      res.redirect('/posts');
     })
   }
-
-  const updatePost = (req, res) => {
-    console.log("update action");
-    console.log(req.params.id);
-    Post.findByIdAndUpdate(req.params.id, req.body, (err, posts) => {
-      if (err) {
-        console.log("error");
-        console.log(err);
-        return res.redirect(`/posts/${post._id}`);
-      }
-      console.log(deck.name);
-      res.redirect(`/posts/${post._id}`);
+  
+  function editPost(req, res) {
+    Post.findById({_id:req.params.id}, (err, posts) => {
+      console.log("Found Post:", posts);
+      res.render("./posts/edit.ejs", {
+        posts,
+        user: req.user
+      });
     });
-  };
+  }
+  
+  function updatePost(req, res) {
+    Post.findByIdAndUpdate(req.params.id, req.body,
+      (err, posts) => {
+        res.redirect('/posts');
+      }
+      );
+    }
+    
+    function addComment(req, res, next) {
+      const comment = new Comment(req.body)
+      Post.findById({_id:req.params.id}, (err, post) => {
+        post.comments.push(comment)
+      })
+      comment.save(function(err, comments) {
+        console.log('comments!', comments);
+        res.redirect('/posts');
+      });
+    }
+  
+    function delComment(req, res, next) {
+      Comment.deleteOne({_id:req.params.id})
+      .then((err) => {
+             res.redirect('/posts');
+      })
+    }
 
-  module.exports = {
-    index,
-    addPost,
-    delPost,
-    updatePost
+    module.exports = {
+      index,
+      addPost,
+      delPost,
+      editPost,
+      updatePost,
+      addComment,
+      delComment
 }

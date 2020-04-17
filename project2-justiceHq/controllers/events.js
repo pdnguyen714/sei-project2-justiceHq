@@ -18,7 +18,7 @@ function addPost(req, res, next) {
   //console.log('req.body', req.body);
   const post = new Post(req.body)
   post.save(function (err, posts) {
-    console.log('last added', posts);
+    console.log('last event', posts);
     res.redirect('/events');
   });
 }
