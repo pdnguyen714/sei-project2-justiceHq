@@ -57,13 +57,6 @@ function index(req, res, next) {
         res.redirect('/posts');
       });
     }
-  
-    function delComment(req, res, next) {
-      Comment.deleteOne({_id:req.params.id})
-      .then((err) => {
-             res.redirect('/posts');
-      })
-    }
 
     module.exports = {
       index,
@@ -72,5 +65,4 @@ function index(req, res, next) {
       editPost,
       updatePost,
       addComment,
-      delComment
 }

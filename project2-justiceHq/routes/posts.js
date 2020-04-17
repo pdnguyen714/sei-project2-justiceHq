@@ -6,7 +6,6 @@ router.get('/', postsCtrl.index);
 router.post('/', isLoggedIn, postsCtrl.addPost);
 router.post('/', isLoggedIn, postsCtrl.addComment);
 router.delete('/:id', isLoggedIn, postsCtrl.delPost);
-router.delete('/:id', isLoggedIn, postsCtrl.delComment);
 router.put("/:id", isLoggedIn, postsCtrl.updatePost);
 
 function isLoggedIn(req, res, next) {
