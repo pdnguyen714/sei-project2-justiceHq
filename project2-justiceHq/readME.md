@@ -14,9 +14,9 @@ Description:
 
 // Justice Headquarters is a forum designed to unite all those passionate about restorative justice together, with the purpose of incubating positive change through user participation.
 
-!(Prison Reform Image 1)[https://imgur.com/oV4VUZz]
-!(JHQ)[https://imgur.com/5qknFKo]
-!(JHQ)[https://imgur.com/D2DpPlj]
+!(Imgur Image)[https://imgur.com/oV4VUZz.png]
+!(Imgur Image)[https://imgur.com/5qknFKo.png]
+!(Imgur Image)[https://imgur.com/D2DpPlj.png]
 
 =========================================
 Technologies Used:
