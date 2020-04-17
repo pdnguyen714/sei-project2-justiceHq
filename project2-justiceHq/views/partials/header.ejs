@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>JusticeHQ</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
-<body class="#757575 grey darken-1">
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper #424242 grey darken-3">
-        <a href="/" class="padding-left brand-logo left">JusticeHQ</a>
-        <ul class="brand-logo center">
-          <li><a href="/posts">All Posts</a></li>
-          <li><a href="/events">Events</a></li>
-        </ul>
-        <ul class="right">
-          <li>
-            <% if (user) { %>
-            <a href="/logout"><i class="material-icons left" trending_flat></i>Log Out</a>
-            <% } else { %>
-                  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-            <% } %>
-          </li>
-          <li class="padding-right"><%= user ? `Logged in as: ${user.name}` : "Not Logged In" %></li>
-        </ul>
-      </div>
-  </div>
-  </nav>
-  </div>
-
-  <!-- <nav>
-    <div class="nav-wrapper">
-      <a href="" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">sass</a></li>
-        <li><a href="">sass <span class="new badge">4</span></a></li>
-        <li><a href="">sass</a></li>
-      </ul>
+  <body class="#757575 grey darken-1">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper #424242 grey darken-3">
+          <a href="/" class="padding-left brand-logo left">JusticeHQ</a>
+          <ul class="brand-logo center">
+            <li><a href="/posts">All Posts</a></li>
+            <li><a href="/events">Events</a></li>
+          </ul>
+          <ul class="right">
+            <li>
+              <% if (user) { %>
+              <a href="/logout"><i class="material-icons left" trending_flat></i>Log Out</a>
+              <% } else { %>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+              <% } %>
+            </li>
+            <li class="padding-right"><%= user ? `Logged in as: ${user.name}` : "Not Logged In" %></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav> -->
