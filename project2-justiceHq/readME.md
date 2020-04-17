@@ -1,12 +1,12 @@
 =========================================
-Welcome to Justice Headquarters (JH):
+Welcome to JusticeHQ (JHQ):
 =========================================
 
 Name: Peter Nguyen 
 
 Purpose: Project 2 for GA's SEI-71
 
-Application: Justice Headquarters(JH)
+Application: JusticeHQ(JHQ)
 
 =========================================
 Description:
@@ -14,7 +14,9 @@ Description:
 
 // Justice Headquarters is a forum designed to unite all those passionate about restorative justice together, with the purpose of incubating positive change through user participation.
 
-// (Screenshots will go here)
+!alt[https://imgur.com/oV4VUZz]
+!alt[https://imgur.com/5qknFKo]
+!alt[https://imgur.com/D2DpPlj]
 
 =========================================
 Technologies Used:
@@ -52,3 +54,7 @@ Next Steps:
 3. Scaling to all platforms, including but not limited to a Mobile app
 
 4. Allowing users who are logged in to post live streams
+
+5. Being able to categorize topics in view all posts
+
+6. Allowing users to update to the database dynamically (like Waze)

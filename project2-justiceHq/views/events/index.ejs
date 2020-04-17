@@ -2,21 +2,26 @@
 <div class="row">
   <div id="users" class="col s12">
     <div class="card black">
+      <h1 class="center white-text" style="padding-top: 1em; font-size: 3.5em">Events</h1>
       <div class="card-content black-text">
         <ul class="collection">
-          <% posts.forEach(function(p) { %>
-          <li class="collection-item  text-darken-2">
-            <span class="title"><%- p.text %></span>
-          </li>
-          <% }) %>
+          <div>
+            <h1 class="center white-text">The Last Mile</h1>
+            <li class="collection-item  text-darken-2"><img class="responsive-img" src="../images/jhq4.png" alt="Prison Reform img"></li>
+          </div>
+          <div>
+            <h1 class="center white-text">Underground Grit</h1>
+            <li class="collection-item  text-darken-2"><img class="responsive-img" src="../images/jhq2.jpeg" alt="Prison Reform img"></li>
+          </div>
+          <div>
+            <h1 class="center white-text">Kids Creating Awareness Together</h1>
+            <li class="collection-item  text-darken-2"><img class="responsive-img" src="../images/jhq3.jpeg" alt="Prison Reform img"></li>
+          </div>
+          <div>
+            <h1 class="center white-text">Restoring Our Original True Selves</h1>
+            <li class="collection-item  text-darken-2"><img class="responsive-img" src="../images/jhq1.jpeg" alt="Prison Reform img"></li>
+          </div>
         </ul>
-        <!-- <div class="card-action">
-          <form action="/posts" method="POST">
-            <input type="hidden" name="posts">
-            <input type="text" name="text" class="black white-text">
-            <button class="btn white black-text" type="submit">Add Post</button>
-          </form>
-        </div> -->
       </div>
     </div>
   </div>
