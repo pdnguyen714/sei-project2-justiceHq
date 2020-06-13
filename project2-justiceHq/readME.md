@@ -28,8 +28,7 @@ Justice Headquarters is a forum designed to unite all those passionate about res
 
 ## Getting Started:
 
-JusticeHQ:
-https://seiproject2.herokuapp.com
+* [JusticeHQ](https://seiproject2.herokuapp.com)
 
 ## Icebox Features:
 
