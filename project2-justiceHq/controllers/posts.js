@@ -46,17 +46,6 @@ function index(req, res, next) {
       }
       );
     }
-    
-    // function addComment(req, res, next) {
-    //   const comment = new Comment(req.body)
-    //   Post.findById({_id:req.params.id}, (err, post) => {
-    //     post.comments.push(comment)
-    //   })
-    //   comment.save(function(err, comments) {
-    //     console.log('comments!', comments);
-    //     res.redirect('/posts');
-    //   });
-    // }
 
     module.exports = {
       index,
@@ -64,5 +53,4 @@ function index(req, res, next) {
       delPost,
       editPost,
       updatePost,
-      // addComment,
 }
