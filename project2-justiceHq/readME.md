@@ -4,7 +4,7 @@ Welcome to JusticeHQ (JHQ):
 
 Name: Peter Nguyen 
 
-Purpose: Project 2 for GA's SEI-71
+Purpose: Project 2 for General Assembly's Software Engineering Immersive
 
 Application: JusticeHQ(JHQ)
 
@@ -12,7 +12,7 @@ Application: JusticeHQ(JHQ)
 Description:
 =========================================
 
-// Justice Headquarters is a forum designed to unite all those passionate about restorative justice together, with the purpose of incubating positive change through user participation.
+Justice Headquarters is a forum designed to unite all those passionate about restorative justice together, with the purpose of incubating positive change through user participation.
 
 ![Imgur Image](https://imgur.com/oV4VUZz.png)
 ![Imgur Image](https://imgur.com/5qknFKo.png)
@@ -22,11 +22,11 @@ Description:
 Technologies Used:
 =========================================
 
-- Node
-- HTML
-- CSS
-- Javascript
-- Mongo DB
+- Node.js
+- HTML5
+- CSS3
+- JavaScript
+- MongoDB
 - Express
 - Mongoose
 
@@ -36,15 +36,6 @@ Getting Started:
 
 JusticeHQ:
 https://seiproject2.herokuapp.com
-
-Trello:
-https://trello.com/b/wPxF9Tcz/sei-dt-71project-2
-
-Lucidchart:
-https://www.lucidchart.com/documents/edit/fc63aa32-82d5-48bb-bd6d-f18594a3763a/0_0?beaconFlowId=B8E1CD4D7011ACD8
-
-Diagrams:
-https://app.diagrams.net/#G166BT8J-644HfU1u2nc5MSUKNMELKZYLY
 
 =========================================
 Next Steps:
