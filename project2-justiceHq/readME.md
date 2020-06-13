@@ -1,16 +1,14 @@
-=========================================
-Welcome to JusticeHQ (JHQ):
-=========================================
+# JusticeHQ
 
-Name: Peter Nguyen 
+## Developed By: Peter Nguyen 
 
-Purpose: Project 2 for General Assembly's Software Engineering Immersive
+## Purpose: 
+
+Project 2 for General Assembly's Software Engineering Immersive
 
 Application: JusticeHQ(JHQ)
 
-=========================================
-Description:
-=========================================
+## Description:
 
 Justice Headquarters is a forum designed to unite all those passionate about restorative justice together, with the purpose of incubating positive change through user participation.
 
@@ -18,9 +16,7 @@ Justice Headquarters is a forum designed to unite all those passionate about res
 ![Imgur Image](https://imgur.com/5qknFKo.png)
 ![Imgur Image](https://imgur.com/D2DpPlj.png)
 
-=========================================
-Technologies Used:
-=========================================
+## Technologies Used:
 
 - Node.js
 - HTML5
@@ -30,16 +26,12 @@ Technologies Used:
 - Express
 - Mongoose
 
-=========================================
-Getting Started:
-=========================================
+## Getting Started:
 
 JusticeHQ:
 https://seiproject2.herokuapp.com
 
-=========================================
-Next Steps:
-=========================================
+## Icebox Features:
 
 1. Refactoring code and making code more efficient and DRY
 
