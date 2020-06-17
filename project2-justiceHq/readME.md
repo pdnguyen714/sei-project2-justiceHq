@@ -43,3 +43,5 @@ Justice Headquarters is a forum designed to unite all those passionate about res
 5. Being able to categorize topics in view all posts
 
 6. Allowing users to update to the database dynamically (like Waze)
+
+7. Using googlemaps API to allow users to utilize geolocation and geocode functionality
